@@ -1,9 +1,9 @@
 ﻿
 namespace Beaver.Views
 {
-    public partial class MainPage
+    public partial class LoginPage
     {
-        public MainPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
