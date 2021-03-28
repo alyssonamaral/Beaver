@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:Beaver.ViewModels" x:DataType="viewmodels:LoginPageViewModel"
              x:Class="Beaver.Views.LoginPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+    <StackLayout VerticalOptions="Center"
+                 Margin="20">
+        <Image Source="{Binding Logo}"
+               x:Name="logoImage"
+               Aspect="AspectFit"
+               HorizontalOptions="FillAndExpand"
+               Margin="0,0,0,20"/>
+        <Entry Text="{Binding User}"
+               x:Name="userEntry" Placeholder="Username"
+               Margin="0,30,0,0"/>
+        <Entry Text="{Binding Password}"
+                x:Name="passwordEntry" Placeholder="Password"
+                Margin="0,30,0,0"
+               IsPassword="True"/>
+        <Button x:Name="LoginButton"
+                Margin="0,40,0,0"
+                Text="Login"
+                Style="{StaticResource normalButton}"
+                Command="{Binding NavigateCommand}"/> 
     </StackLayout>
 
 </ContentPage>

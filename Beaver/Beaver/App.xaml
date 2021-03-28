@@ -4,8 +4,16 @@
              xmlns:prism="http://prismlibrary.com"
              x:Class="Beaver.App">
   <Application.Resources>
+        <Color x:Key="buttonColor">#EE00FF</Color>
+        <Color x:Key="textButtonColor">#FFFFFF</Color>
+        <Color x:Key="placeholderColor">#D3D3D3</Color>
 
-    <!-- Application resource dictionary -->
-
-  </Application.Resources>
+        <Style x:Key="normalButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource buttonColor}"/>
+            <Setter Property="TextColor" Value="{StaticResource textButtonColor}"/>
+        </Style>
+        <Style x:Key="normalPlaceholder" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{StaticResource placeholderColor}"/>
+        </Style>
+    </Application.Resources>
 </prism:PrismApplication>
