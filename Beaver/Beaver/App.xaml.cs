@@ -1,6 +1,7 @@
 using Beaver.ViewModels;
 using Beaver.Views;
 using Prism;
+using Prism.DryIoc;
 using Prism.Ioc;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
@@ -8,12 +9,10 @@ using Xamarin.Forms;
 
 namespace Beaver
 {
-    public partial class App
+    public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer)
-            : base(initializer)
-        {
-        }
+        public App() : this(null) { }
+        public App(IPlatformInitializer initializer) : base(initializer){}
 
         protected override async void OnInitialized()
         {
@@ -28,6 +27,18 @@ namespace Beaver
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<RegisterPage, RegisterPageViewModel>();
+        }
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
         }
     }
 }

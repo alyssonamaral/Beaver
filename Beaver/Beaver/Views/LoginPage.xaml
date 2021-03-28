@@ -10,19 +10,24 @@
                x:Name="logoImage"
                Aspect="AspectFit"
                HorizontalOptions="FillAndExpand"
-               Margin="0,0,0,20"/>
+               Margin="0,0,0,0"/>
         <Entry Text="{Binding User}"
                x:Name="userEntry" Placeholder="Username"
-               Margin="0,30,0,0"/>
+               Margin="0,0,0,0"/>
         <Entry Text="{Binding Password}"
                 x:Name="passwordEntry" Placeholder="Password"
-                Margin="0,30,0,0"
+                Margin="0,0,0,0"
                IsPassword="True"/>
-        <Button x:Name="LoginButton"
-                Margin="0,40,0,0"
-                Text="Login"
-                Style="{StaticResource normalButton}"
-                Command="{Binding NavigateCommand}"/> 
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="LoginButton"
+                    Text="Login"
+                    Style="{StaticResource normalButton}"
+                    Command="{Binding NavigateCommand}"/>
+            <Button x:Name="RegisterButton"
+                    Text="Register"
+                    Style="{StaticResource normalButton}"
+                    Command="{Binding NavigateRegisterCommand}"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using Beaver.Views;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Beaver.ViewModels
 {
@@ -30,23 +32,31 @@ namespace Beaver.ViewModels
         public DelegateCommand NavigateCommand => _navigateCommand
             ?? (_navigateCommand = new DelegateCommand(async () => await ExecuteNavigateCommand()));
 
+        DelegateCommand _navigateRegisterCommand;
+        public DelegateCommand NavigateRegisterCommand => _navigateRegisterCommand
+            ?? (_navigateRegisterCommand = new DelegateCommand(async () => await ExecuteNavigateRegisterCommand()));
+
+        private async Task ExecuteNavigateRegisterCommand()
+        {
+            await NavigationService.NavigateAsync(nameof(RegisterPage));
+        }
+
         public LoginPageViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             Title = "LoginPage";
         }
         private async Task ExecuteNavigateCommand()
         {
-            bool isEmailEmpty = string.IsNullOrEmpty(User);
+            bool isUserEmpty = string.IsNullOrEmpty(User);
             bool isPasswordEmpty = string.IsNullOrEmpty(Password);
-            if (isEmailEmpty || isPasswordEmpty)
+            if (isUserEmpty || isPasswordEmpty)
             {
-                await _dialogService.DisplayAlertAsync("Falha ao entrar", "Email e senha precisam ser preenchidos", "OK");
+                await _dialogService.DisplayAlertAsync("Hey", "You need to put a user and password valid", "OK");
             }
             else
             {
                 //await NavigationService.NavigateAsync(nameof());
             }
         }
-
     }
 }

@@ -5,6 +5,7 @@ using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Beaver.ViewModels
@@ -17,6 +18,7 @@ namespace Beaver.ViewModels
             get { return _title; }
             set { SetProperty(ref _title, value); }
         }
+
         private ImageSource _logo;
         public ImageSource Logo
         {
@@ -24,31 +26,32 @@ namespace Beaver.ViewModels
             set => SetProperty(ref _logo, value);
         }
 
-        protected INavigationService NavigationService { get; private set; }
 
+        public virtual Task InitializeAsync(INavigationParameters parameters)
+      => Task.CompletedTask;
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+
+        }
+
+        protected readonly INavigationService NavigationService;
         protected readonly IPageDialogService _dialogService;
         public ViewModelBase(INavigationService navigationService, IPageDialogService dialogService)
         {
             NavigationService = navigationService;
-            _dialogService = dialogService;
-            Logo = ImageSource.FromResource("Beaver.Assets.Images.BeaverLogo_mini.png");
+            _dialogService = dialogService; 
+            Logo = ImageSource.FromResource("Beaver.Assets.Images.beaverLogo.png");
         }
 
         public virtual void Initialize(INavigationParameters parameters)
         {
 
         }
-
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-
-        }
-
         public virtual void Destroy()
         {
 
