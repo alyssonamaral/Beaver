@@ -18,7 +18,7 @@
                 x:Name="passwordEntry" Placeholder="Password"
                 Margin="0,0,0,0"
                IsPassword="True"/>
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Button x:Name="LoginButton"
                     Text="Login"
                     Style="{StaticResource normalButton}"
