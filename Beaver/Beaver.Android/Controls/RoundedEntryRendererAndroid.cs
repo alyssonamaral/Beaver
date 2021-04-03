@@ -17,7 +17,7 @@ using Xamarin.Forms.Platform.Android;
 [assembly: ExportRenderer(typeof(RoundedEntry), typeof(RoundedEntryRendererAndroid))]
 namespace Beaver.Droid.Controls
 {
-    class RoundedEntryRendererAndroid : EntryRenderer
+    public class RoundedEntryRendererAndroid : EntryRenderer
     {
         public RoundedEntryRendererAndroid(Context context) : base(context)
         {

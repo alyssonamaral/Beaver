@@ -4,9 +4,23 @@
              x:Class="Beaver.Views.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Home Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Discover" 
+                   TextColor="Black" 
+                   FontSize="24"
+                   Margin="15"/>
+            <Frame HeightRequest="330"
+                   WidthRequest="230"
+                   BackgroundColor="White"
+                   CornerRadius="10"
+                   Padding="0"
+                   HasShadow="True"
+                   Margin="10" 
+                   HorizontalOptions="CenterAndExpand">
+                <Image Source="https://i1.sndcdn.com/artworks-000299554542-yc9iwn-t500x500.jpg" 
+                       Aspect="AspectFill" />
+
+            </Frame>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
