@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Beaver.Controls"
              x:Class="Beaver.Views.LoginPage"
              Title="{Binding Title}">
 
@@ -11,10 +11,10 @@
                Aspect="AspectFit"
                HorizontalOptions="FillAndExpand"
                Margin="0,0,0,0"/>
-        <Entry Text="{Binding User}"
+        <controls:RoundedEntry Text="{Binding User}"
                x:Name="userEntry" Placeholder="Username"
                Margin="0,0,0,0"/>
-        <Entry Text="{Binding Password}"
+        <controls:RoundedEntry Text="{Binding Password}"
                 x:Name="passwordEntry" Placeholder="Password"
                 Margin="0,0,0,0"
                IsPassword="True"/>

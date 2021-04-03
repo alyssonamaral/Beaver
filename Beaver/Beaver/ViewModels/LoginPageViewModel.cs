@@ -55,7 +55,7 @@ namespace Beaver.ViewModels
             }
             else
             {
-                //await NavigationService.NavigateAsync(nameof());
+                await NavigationService.NavigateAsync(nameof(HomePage));
             }
         }
     }
