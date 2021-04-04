@@ -6,14 +6,18 @@
              prism:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Content>
     <StackLayout>
-        <Label Text="Discover" 
+        <Label Text="My Reading List" 
                    TextColor="Black" 
-                   FontSize="24"
+                   FontSize="20"
                    FontAttributes="Bold"
-                   Margin="15"/>
+                   Margin="10,10,0,10"/>
 
-        <CarouselView ItemsSource="{Binding stories}" HeightRequest="350" PeekAreaInsets="110">
-            <CarouselView.ItemTemplate>
+        <CarouselView ItemsSource="{Binding stories}" HeightRequest="350" PeekAreaInsets="110" Margin="-95,0,0,0">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"
+                           ItemSpacing="5" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <Frame HeightRequest="330"
                             WidthRequest="230"
@@ -24,7 +28,7 @@
                             Margin="10" 
                             HorizontalOptions="CenterAndExpand">
                             <Grid>
-                                <StackLayout BackgroundColor="Black">
+                                <StackLayout>
                                     <Image Source="{Binding bookCover}"
                                        HeightRequest="350"
                                        Aspect="AspectFill" 
