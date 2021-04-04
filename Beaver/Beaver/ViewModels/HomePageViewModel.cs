@@ -44,7 +44,7 @@ namespace Beaver.ViewModels
             {
                 id = 1,
                 title = "Luna",
-                bookCover = "https://www.drakkarbrasil.com.br/store/211/alcest-ecailles-de-lune-cd.jpg"
+                bookCover = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/luna-edward-burne-jones.jpg"
             });
 
             stories.Add(new Stories
@@ -52,6 +52,13 @@ namespace Beaver.ViewModels
                 id = 2,
                 title = "Architecure Girl",
                 bookCover = "https://cdn.culturagenial.com/imagens/zodiac-mucha.jpg"
+            });
+
+            stories.Add(new Stories
+            {
+                id = 1,
+                title = "Chapter 13: Love Story",
+                bookCover = "https://i.pinimg.com/originals/ab/91/51/ab915112dbade8b6a7e780eb1d16db48.jpg"
             });
         }
     }
