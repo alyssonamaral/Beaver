@@ -38,7 +38,7 @@ namespace Beaver.ViewModels
 
         private async Task ExecuteNavigateRegisterCommand()
         {
-            await NavigationService.NavigateAsync(nameof(RegisterPage));
+            await _navigationService.NavigateAsync(nameof(RegisterPage));
         }
 
         public LoginPageViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
@@ -55,7 +55,7 @@ namespace Beaver.ViewModels
             }
             else
             {
-                await NavigationService.NavigateAsync(nameof(HomePage));
+                await _navigationService.NavigateAsync(nameof(TabPage));
             }
         }
     }

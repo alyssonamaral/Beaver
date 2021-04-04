@@ -2,15 +2,57 @@
 using Prism.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using Xamarin.Forms;
+using Beaver.Models;
 
 namespace Beaver.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase
+    public class HomePageViewModel : ViewModelBase, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private ObservableCollection<Stories> Stories;
+
+        public ObservableCollection<Stories> stories
+        {
+            get { return Stories; }
+            set
+            {
+                Stories = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("stories"));
+            }
+        }
         public HomePageViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
+            stories = new ObservableCollection<Stories>();
+            addData();
+        }
+
+        private void addData()
+        {
+            stories.Add(new Stories
+            {
+                id = 0,
+                title = "A Night Tale: Origin",
+                bookCover = "https://i1.sndcdn.com/artworks-000299554542-yc9iwn-t500x500.jpg"
+            });
+
+            stories.Add(new Stories
+            {
+                id = 1,
+                title = "Luna",
+                bookCover = "https://www.drakkarbrasil.com.br/store/211/alcest-ecailles-de-lune-cd.jpg"
+            });
+
+            stories.Add(new Stories
+            {
+                id = 2,
+                title = "Architecure Girl",
+                bookCover = "https://cdn.culturagenial.com/imagens/zodiac-mucha.jpg"
+            });
         }
     }
 }

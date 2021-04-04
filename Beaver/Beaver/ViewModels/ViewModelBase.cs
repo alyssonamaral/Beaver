@@ -4,6 +4,7 @@ using Prism.Navigation;
 using Prism.Services;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -39,11 +40,11 @@ namespace Beaver.ViewModels
 
         }
 
-        protected readonly INavigationService NavigationService;
+        protected readonly INavigationService _navigationService;
         protected readonly IPageDialogService _dialogService;
         public ViewModelBase(INavigationService navigationService, IPageDialogService dialogService)
         {
-            NavigationService = navigationService;
+            _navigationService = navigationService;
             _dialogService = dialogService; 
             Logo = ImageSource.FromResource("Beaver.Assets.Images.beaverLogo.png");
         }
