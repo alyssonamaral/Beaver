@@ -2,32 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Beaver.Controls"
              x:Class="Beaver.Views.LoginPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundImageSource="{Binding BeaverBackground}">
 
-    <StackLayout VerticalOptions="Center"
-                 Margin="20">
-        <Image Source="{Binding Logo}"
-               x:Name="logoImage"
-               Aspect="AspectFit"
-               HorizontalOptions="FillAndExpand"
-               Margin="0,0,0,0"/>
+    <StackLayout Margin="20" VerticalOptions="End">
+        <Label Text="hi there!"
+               TextColor="White"
+               FontSize="30"
+               HorizontalTextAlignment="Center"/>
+        <Label Text="Enter in a world that is only yours"
+               TextColor="White"
+               FontSize="15"
+               HorizontalTextAlignment="Center"
+               Margin="0,0,0,60"/>
         <controls:RoundedEntry Text="{Binding User}"
                x:Name="userEntry" Placeholder="Username"
-               Margin="0,0,0,0"/>
+               Margin="0,0,0,10"
+               Opacity="0.5"/>
         <controls:RoundedEntry Text="{Binding Password}"
                 x:Name="passwordEntry" Placeholder="Password"
                 Margin="0,0,0,0"
                IsPassword="True"/>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
-            <Button x:Name="LoginButton"
-                    Text="Login"
-                    Style="{StaticResource normalButton}"
-                    Command="{Binding NavigateCommand}"/>
             <Button x:Name="RegisterButton"
-                    Text="Register"
+                    Text="SIGNUP"
+                    CornerRadius="100"
                     Style="{StaticResource normalButton}"
                     Command="{Binding NavigateRegisterCommand}"/>
+            <Button x:Name="LoginButton"
+                    Text="LOGIN"
+                    CornerRadius="100"
+                    Style="{StaticResource normalButton}"
+                    Command="{Binding NavigateCommand}"/>
         </StackLayout>
+        <Label Text="or connect with Facebook"
+               TextColor="White"
+               FontSize="15"
+               HorizontalTextAlignment="Center"/>
     </StackLayout>
 
 </ContentPage>

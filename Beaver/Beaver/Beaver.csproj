@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\beaverBackground.png" />
     <None Remove="Assets\Images\beaverLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\beaverBackground.png" />
     <EmbeddedResource Include="Assets\Images\beaverLogo.png" />
   </ItemGroup>
 

@@ -30,7 +30,7 @@ namespace Beaver.Droid.Controls
             if (e.OldElement == null)
             {
                 var gradientDrawable = new GradientDrawable();
-                gradientDrawable.SetCornerRadius(20f);
+                gradientDrawable.SetCornerRadius(100f);
                 gradientDrawable.SetColor(Android.Graphics.Color.Gainsboro);
                 Control.SetBackground(gradientDrawable);
                 Control.FocusChange += FocusChanged;
@@ -47,7 +47,7 @@ namespace Beaver.Droid.Controls
                 color = Android.Graphics.Color.Gainsboro;
 
             var gradientDrawable = new GradientDrawable();
-            gradientDrawable.SetCornerRadius(20f);
+            gradientDrawable.SetCornerRadius(100f);
             gradientDrawable.SetStroke(5, color);
             gradientDrawable.SetColor(Android.Graphics.Color.Gainsboro);
             Control.SetBackground(gradientDrawable);

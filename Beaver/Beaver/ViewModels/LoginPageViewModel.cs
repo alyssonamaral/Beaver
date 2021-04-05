@@ -27,6 +27,12 @@ namespace Beaver.ViewModels
             get { return _password; }
             set => SetProperty(ref _password, value);
         }
+        private ImageSource _beaverBackground;
+        public ImageSource BeaverBackground
+        {
+            get { return _beaverBackground; }
+            set => SetProperty(ref _beaverBackground, value);
+        }
 
         DelegateCommand _navigateCommand;
         public DelegateCommand NavigateCommand => _navigateCommand
@@ -44,6 +50,7 @@ namespace Beaver.ViewModels
         public LoginPageViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             Title = "LoginPage";
+            BeaverBackground = ImageSource.FromResource("Beaver.Assets.Images.beaverBackground.png");
         }
         private async Task ExecuteNavigateCommand()
         {
