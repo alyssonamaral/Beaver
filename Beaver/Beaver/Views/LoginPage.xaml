@@ -18,16 +18,21 @@
         <controls:RoundedEntry Text="{Binding User}"
                x:Name="userEntry" Placeholder="Username"
                Margin="0,0,0,10"
-               Opacity="0.5"/>
+               PlaceholderColor="White"
+               Opacity="0.3"/>
         <controls:RoundedEntry Text="{Binding Password}"
-                x:Name="passwordEntry" Placeholder="Password"
-                Margin="0,0,0,0"
-               IsPassword="True"/>
+               x:Name="passwordEntry" Placeholder="Password"
+               Margin="0,0,0,0"
+               PlaceholderColor="White"
+               IsPassword="True"
+               TextColor="White"
+               Opacity="0.3"/>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
             <Button x:Name="RegisterButton"
                     Text="SIGNUP"
                     CornerRadius="100"
-                    Style="{StaticResource normalButton}"
+                    TextColor="White"
+                    Opacity="0.3"
                     Command="{Binding NavigateRegisterCommand}"/>
             <Button x:Name="LoginButton"
                     Text="LOGIN"
