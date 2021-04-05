@@ -109,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Beaver\Beaver.csproj">
-      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
+      <Project>{9CBE97B4-7477-4309-93AE-845347E0FE3E}</Project>
       <Name>Beaver</Name>
     </ProjectReference>
   </ItemGroup>

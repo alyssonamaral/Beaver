@@ -105,6 +105,7 @@ Global
 		{DBC66DD6-8C3D-489E-9EBA-1B2307308278}.Release|iPhone.Build.0 = Release|iPhone
 		{DBC66DD6-8C3D-489E-9EBA-1B2307308278}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{DBC66DD6-8C3D-489E-9EBA-1B2307308278}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{DBC66DD6-8C3D-489E-9EBA-1B2307308278}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
